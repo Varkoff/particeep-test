@@ -28,15 +28,18 @@ export const App = () => {
 				<LoadingSkeleton />
 			) : (
 				<ErrorBoundary
-					fallback={
+					FallbackComponent={({ error }) => (
 						<div
 							role='alert'
 							className='flex flex-col gap-4 px-8 py-6 bg-red-100'
 						>
-							<h2 className='text-red-600 text-3xl font-bold'>Oops 😕</h2>
+							<h2 className='text-red-600 text-3xl font-bold'>
+								Oops 😕 : {error.name}
+							</h2>
 							<p className='text-red-800'>Une erreur est survenue.</p>
+							<p className='text-red-800 mt-4 text-sm'>{error.message}</p>
 						</div>
-					}
+					)}
 				>
 					<MovieList movies={movies} />
 				</ErrorBoundary>
