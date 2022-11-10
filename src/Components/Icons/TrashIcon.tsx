@@ -8,7 +8,7 @@ const TrashIcon = ({ className }: { className?: string }) => {
 			viewBox='0 0 24 24'
 			strokeWidth={1.5}
 			stroke='currentColor'
-			className={`h-6 w-6 ${className}`}
+			className={`h-8 w-8 ${className}`}
 		>
 			<path
 				strokeLinecap='round'

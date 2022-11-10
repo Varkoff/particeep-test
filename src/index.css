@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 body {
-	background-color: aliceblue;
+	background-color: rgb(248, 250, 242);
 }
 .card-wrapper {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
 	grid-gap: 2rem;
 }
